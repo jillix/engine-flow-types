@@ -1,0 +1,25 @@
+{
+  "name": "engine-flow-types",
+  "version": "1.0.0",
+  "description": "Low level library providing Engine flow types.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jillix/engine-flow-types.git"
+  },
+  "keywords": [
+    "engine",
+    "jillix",
+    "flow",
+    "types"
+  ],
+  "author": "jillix <contact@jillix.com> (http://jillix.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jillix/engine-flow-types/issues"
+  },
+  "homepage": "https://github.com/jillix/engine-flow-types#readme"
+}
