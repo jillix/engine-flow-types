@@ -2,12 +2,38 @@
 
 Low level library providing Engine flow types.
 
-:warning: Work in progress!
-
 ## Installation
 
 ```sh
 $ npm i engine-flow-types
+```
+
+## Example
+
+```js
+const types = require("engine-flow-types");
+
+// Create a new listener
+var listener = new types.Listener("some event", "error event", "end event");
+
+listener.addData(new types.DataHandler("someMethod", {
+    to: "some-instance"
+  , data: {
+        key: "value"
+    }
+}));
+
+console.log(listener);
+// => Listener {
+//   event_name: 'some event',
+//   data:
+//    [ DataHandler {
+//        method: 'someMethod',
+//        once: false,
+//        to: 'some-instance',
+//        data: {} } ],
+//   error: 'error event',
+//   end: 'end event' }
 ```
 
 ## How to contribute
@@ -18,7 +44,8 @@ If you are using this library in one of your projects, add it in this list. :spa
 
 ## License
 
-See the [LICENSE](/LICENSE) file.
+MIT © [jillix][website]
 
+[website]: http://jillix.com
 [contributing]: /CONTRIBUTING.md
 [docs]: /DOCUMENTATION.md
