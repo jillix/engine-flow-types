@@ -1,9 +1,9 @@
 const types = require("../lib");
 
 // Create a new listener
-var listener = new types.Listener("some event");
+var listener = new types.Listener("some event", "error event", "end event");
 
-listener.addComponent(new types.DataHandler("someMethod", {
+listener.addData(new types.DataHandler("someMethod", {
     to: "some-instance"
   , data: {
         key: "value"
@@ -11,3 +11,13 @@ listener.addComponent(new types.DataHandler("someMethod", {
 }));
 
 console.log(listener);
+// => Listener {
+//   event_name: 'some event',
+//   data:
+//    [ DataHandler {
+//        method: 'someMethod',
+//        once: false,
+//        to: 'some-instance',
+//        data: {} } ],
+//   error: 'error event',
+//   end: 'end event' }
