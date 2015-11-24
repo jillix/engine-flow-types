@@ -24,6 +24,7 @@
   "homepage": "https://github.com/jillix/engine-flow-types#readme",
   "dependencies": {
     "iterate-object": "^1.2.0",
+    "map-o": "^1.2.0",
     "typpy": "^2.2.0",
     "ul": "^5.1.0"
   }
