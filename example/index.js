@@ -11,13 +11,33 @@ listener.addData(new types.DataHandler("someMethod", {
 }));
 
 console.log(listener);
-// => Listener {
+// =>
+// Listener {
 //   event_name: 'some event',
 //   data:
 //    [ DataHandler {
-//        method: 'someMethod',
-//        once: false,
 //        to: 'some-instance',
-//        data: {} } ],
+//        options: undefined,
+//        method: 'someMethod',
+//        once: false } ],
 //   error: 'error event',
 //   end: 'end event' }
+
+var dh = new types.DataHandler("someMethod", {
+    once: true
+  , to: "someInstance"
+}, {
+    some: "data"
+});
+
+console.log(dh.get(), dh.constructor.name);
+// => [ 'someMethod', { some: 'data' } ]
+
+var sh  = new types.StreamHandler("someMethod", {
+    to: "someInstance"
+}, {
+    some: "data"
+});
+
+console.log(sh.get(), sh.constructor.name);
+// => [ 'someMethod', { some: 'data' } ]
