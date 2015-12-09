@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/jillix/engine-flow-types#readme",
   "dependencies": {
+    "deffy": "^2.2.0",
     "iterate-object": "^1.2.0",
     "map-o": "^1.2.0",
     "typpy": "^2.2.0",
