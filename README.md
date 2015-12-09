@@ -5,7 +5,7 @@ Low level library providing Engine flow types.
 ## Installation
 
 ```sh
-$ npm i engine-flow-types
+$ npm i --save engine-flow-types
 ```
 
 ## Example
@@ -24,16 +24,36 @@ listener.addData(new types.DataHandler("someMethod", {
 }));
 
 console.log(listener);
-// => Listener {
+// =>
+// Listener {
 //   event_name: 'some event',
 //   data:
 //    [ DataHandler {
-//        method: 'someMethod',
-//        once: false,
 //        to: 'some-instance',
-//        data: {} } ],
+//        options: undefined,
+//        method: 'someMethod',
+//        once: false } ],
 //   error: 'error event',
 //   end: 'end event' }
+
+var dh = new types.DataHandler("someMethod", {
+    once: true
+  , to: "someInstance"
+}, {
+    some: "data"
+});
+
+console.log(dh.get(), dh.constructor.name);
+// => [ 'someMethod', { some: 'data' } ]
+
+var sh  = new types.StreamHandler("someMethod", {
+    to: "someInstance"
+}, {
+    some: "data"
+});
+
+console.log(sh.get(), sh.constructor.name);
+// => [ 'someMethod', { some: 'data' } ]
 ```
 
 ## How to contribute
@@ -44,8 +64,9 @@ If you are using this library in one of your projects, add it in this list. :spa
 
 ## License
 
-MIT © [jillix][website]
+[MIT][license] © [jillix][website]
 
+[license]: http://showalicense.com/?fullname=jillix%20%3Ccontact%40jillix.com%3E%20(http%3A%2F%2Fjillix.com)&year=2015#license-mit
 [website]: http://jillix.com
 [contributing]: /CONTRIBUTING.md
 [docs]: /DOCUMENTATION.md
