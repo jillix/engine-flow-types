@@ -23,11 +23,11 @@
   },
   "homepage": "https://github.com/jillix/engine-flow-types#readme",
   "dependencies": {
-    "deffy": "^2.2.0",
-    "iterate-object": "^1.2.0",
-    "map-o": "^1.2.0",
-    "regex-escape": "^3.4.0",
-    "typpy": "^2.2.0",
-    "ul": "^5.1.0"
+    "deffy": "^2.2.1",
+    "iterate-object": "^1.3.1",
+    "map-o": "^2.0.1",
+    "regex-escape": "^3.4.1",
+    "typpy": "^2.3.1",
+    "ul": "^5.2.1"
   }
 }
