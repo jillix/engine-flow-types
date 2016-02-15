@@ -1,6 +1,6 @@
-# engine-flow-types
+# engine-flow-types [![Version](https://img.shields.io/npm/v/engine-flow-types.svg)](https://www.npmjs.com/package/engine-flow-types) [![Downloads](https://img.shields.io/npm/dt/engine-flow-types.svg)](https://www.npmjs.com/package/engine-flow-types)
 
-Low level library providing Engine flow types.
+> Low level library providing Engine flow types.
 
 ## Installation
 
@@ -61,6 +61,8 @@ Have an idea? Found a bug? See [how to contribute][contributing].
 
 ## Where is this library used?
 If you are using this library in one of your projects, add it in this list. :sparkles:
+
+ - [`enny`](https://github.com/IonicaBizau/enny) by jillix
 
 ## License
 
